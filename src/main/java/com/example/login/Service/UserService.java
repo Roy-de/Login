@@ -1,9 +1,9 @@
 package com.example.login.Service;
 
 import com.example.login.Entity.Data.UserData;
+import com.example.login.Entity.User.UserEntity;
 
 public interface UserService {
-    void Register(UserData userdata)throws Exception;
+    UserEntity Register(UserData userdata);
 
-    boolean checkifUserExists(String email);
 }

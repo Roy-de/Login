@@ -1,16 +1,22 @@
 package com.example.login.Entity.Data;
 
-import jakarta.annotation.Nonnull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
 @Getter
 @Setter
-public class UserData implements Serializable {
+@NoArgsConstructor
+public class UserData {
     private int id;
-    @Nonnull
     private String Name;
     private String Password;
     private String Email;
+
+    public UserData(String name, String password, String email) {
+        Name = name;
+        Password = password;
+        Email = email;
+    }
 }
